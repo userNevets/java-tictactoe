@@ -52,9 +52,8 @@ public class TictactueWindow extends JFrame implements ActionListener {
 
     private JPanel createGameField() {
         JPanel gameField = new JPanel();
-        gameField.setBounds(0, 60, 400, 330);
-        gameField.setBackground(Color.blue);
-        gameField.setLayout(new GridLayout(3, 3, 2, 2));
+        gameField.setBounds(0, 60, 400, 300);
+        gameField.setLayout(new GridLayout(3, 3));
 
         for (int i = 0; i < fields.length; i++) {
             gameField.add(fields[i]);
