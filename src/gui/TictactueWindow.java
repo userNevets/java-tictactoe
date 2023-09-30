@@ -37,6 +37,8 @@ public class TictactueWindow extends JFrame implements ActionListener {
         setLayout(null);
     }
 
+    //Todo: Überschreiben ausschalten
+
     private JTextField createScreen() {
         JTextField textField = new JTextField("Spieler 1 fängt an!");
         textField.setBounds(0, 0, 400, 50);
@@ -132,13 +134,15 @@ public class TictactueWindow extends JFrame implements ActionListener {
 
     private void validateWinner() {
         if((counter % 2) == 0) {
-            System.out.println("Spieler 2 hat gewonnen!");
-            JOptionPane.showMessageDialog(null, "Spieler 2 hat gewonnen!");
+            System.out.println("Spieler 1 hat gewonnen!");
+            screen.setText("Spieler 1 ist an der Reihe!");
+            JOptionPane.showMessageDialog(null, "Spieler 1 hat gewonnen!");
             restart();
         }
         else if ((counter % 2) != 0) {
-            System.out.println("Spieler 1 hat gewonnen!");
-            JOptionPane.showMessageDialog(null, "Spieler 1 hat gewonnen!");
+            System.out.println("Spieler 2 hat gewonnen!");
+            screen.setText("Spieler 2 ist an der Reihe!");
+            JOptionPane.showMessageDialog(null, "Spieler 2 hat gewonnen!");
             restart();
         }
     }
